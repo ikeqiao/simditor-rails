@@ -1,8 +1,5 @@
 require "simditor-rails/version"
+require 'simditor-rails/engine'
 
 module Simditor
-  module Rails
-    class Engine < ::Rails::Engine
-    end
-  end
 end
