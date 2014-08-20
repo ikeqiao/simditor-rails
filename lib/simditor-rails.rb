@@ -1,11 +1,5 @@
 require "simditor-rails/version"
+require 'simditor-rails/engine'
 
 module Simditor
-  module Rails
-    class Engine < ::Rails::Engine
-      initializer :assets do |config|
-        Rails.application.config.assets.precompile << %w( loading-upload.gif )
-      end
-    end
-  end
 end
