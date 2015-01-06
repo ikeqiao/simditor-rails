@@ -12,7 +12,8 @@
       url: '',
       params: null,
       connectionCount: 3,
-      leaveConfirm: '正在上传文件，如果离开上传会自动取消'
+      leaveConfirm: '正在上传文件，如果离开上传会自动取消',
+      fileKey: 'upload_file'
     };
 
     Uploader.prototype.files = [];
@@ -116,7 +117,7 @@
       var formData, k, v, _ref,
         _this = this;
       formData = new FormData();
-      formData.append("upload_file", file.obj);
+      formData.append(_this.opts.fileKey, file.obj);
       formData.append("original_filename", file.name);
       if (file.params) {
         _ref = file.params;
